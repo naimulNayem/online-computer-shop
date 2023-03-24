@@ -5,7 +5,7 @@ const MongoClient = mongodb.MongoClient;
 let database;
 
 async function connectToDatabase() {
-  const client = await MongoClient.connect('mongodb+srv://endgame2022:cAQsas46Lbpm5sAL@cluster0.umqwc.mongodb.net/avatar', {useNewUrlParser: true, useUnifiedTopology: true});
+  const client = await MongoClient.connect(process.env.DB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
   database = client.db('avat');
 }
 
