@@ -5,7 +5,7 @@ function createSessionStore() {
   const MongoDBStore = mongoDbStore(expressSession);
 
   const store = new MongoDBStore({
-    uri: 'mongodb+srv://nayemcivil13:bAQfas46Lbom4sAD@cluster0.umqwc.mongodb.net',
+    uri: process.env.DB_URI_first_part,
     databaseName: 'avat',
     collection: 'sessions'
   });
